@@ -1,5 +1,8 @@
 # base image
-FROM ubuntu:xenial
+FROM ubuntu:20.04
+
+# setting non-interactive front end during installs
+ARG DEBIAN_FRONTEND=noninteractive
 
 # label with HEAD commit if given
 ARG GIT_COMMIT=unspecified
@@ -18,7 +21,7 @@ RUN apt-get update && apt-get install -y \
 	openprinting-ppds \
 	hpijs-ppds \
 	hp-ppd \
-	python-cups \
+	python3-cups \
 	cups-backend-bjnp \
 && rm -rf /var/lib/apt/lists/*
 
