@@ -1,17 +1,21 @@
 version: "3"
 services:
   cups:
-    image: love4taylor/cups-airprint:latest
+    image: ghcr.io/love4taylor/cups-airprint:master
     container_name: cups
     network_mode: host
     restart: unless-stopped
     volumes:
       - /var/run/dbus:/var/run/dbus
-      - ~/airprint_data/config:/config
-      - ~/airprint_data/services:/services
+      - cups_config:/config
+      - cups_services:/services
     devices:
       - /dev/bus:/dev/bus
       - /dev/usb:/dev/usb
     environment:
-      - CUPSADMIN=admin
-      - CUPSPASSWORD=password
+      TZ: "Asia/Shanghai"
+      CUPSADMIN: "admin"
+      CUPSPASSWORD: "password"
+volumes:
+  cups_config:
+  cups_services:

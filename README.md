@@ -27,7 +27,7 @@ The local Avahi will be utilized for advertising the printers on the network.
 # <a name="multi-arch"></a> [Multi-arch Image](#toc)
 The below commands reference a
 [Docker Manifest List](https://docs.docker.com/engine/reference/commandline/manifest/)
-at [`love4taylor/cups-airprint`](https://hub.docker.com/r/love4taylor/cups-airprint)
+at [`love4taylor/cups-airprint`](https://ghcr.io/love4taylor/cups-airprint)
 built using Docker's
 [BuildKit](https://docs.docker.com/develop/develop-images/build_enhancements/).
 Simply running commands using this image will pull
@@ -56,7 +56,7 @@ $ docker run \
        --device /dev/usb \
        -e CUPSADMIN="admin" \
        -e CUPSPASSWORD="password" \
-       love4taylor/cups-airprint
+       ghcr.io/love4taylor/cups-airprint:master
 ```
 To stop the container simply run:
 ```
@@ -95,7 +95,7 @@ $ docker create \
        --device /dev/usb \
        -e CUPSADMIN="admin" \
        -e CUPSPASSWORD="password" \
-       love4taylor/cups-airprint
+       ghcr.io/love4taylor/cups-airprint:master
 ```
 Follow this with `docker start` and your cups/airprint printer is running:
 ```
