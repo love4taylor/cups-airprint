@@ -194,7 +194,7 @@ Sometimes the right printer driver is installed in the **love4taylor/cups-airpri
 Docker image, but the **version** is not current. This issue may require one of
 two choices to resolve:
 
-+ Download the **docker-cups-airprint** git repo and build a fresh image
++ Download the **cups-airprint** git repo and build a fresh image
   + This will pull the most recent versions of the printer driver from the package
     manager.
 
